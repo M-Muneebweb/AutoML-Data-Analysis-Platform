@@ -1,156 +1,146 @@
-# 🚀 Website Performance Analyzer (Streamlit)
+# 🚀 AutoML & Data Analysis Platform
 
-A powerful **Streamlit-based web application** that analyzes website
-performance, SEO health, and resource usage.\
-It provides **performance grades**, **warnings**, **actionable
-optimization tips**, and **downloadable reports**.
+A comprehensive **Streamlit-based AutoML application** that allows users to upload datasets, perform data cleaning, exploratory data analysis (EDA), preprocessing, automated model training, evaluation, and download trained models — **all without writing ML code**.
 
-------------------------------------------------------------------------
+---
 
-## 🌐 Live Demo
+## 🌐 Live Demo & Repository
 
-👉 **App:** https://automl-data-analysis-platform.streamlit.app/\
-👉 **GitHub:**
-https://github.com/M-Muneebweb/AutoML-Data-Analysis-Platform
+- 🔗 **Live App:** https://automl-data-analysis-platform.streamlit.app/  
+- 📦 **GitHub Repo:** https://github.com/M-Muneebweb/AutoML-Data-Analysis-Platform
 
-------------------------------------------------------------------------
+---
 
-## ✨ Features
+## ✨ Key Features
 
--   ⏱️ Website load time analysis
--   📦 Page size & request count detection
--   🖼️ Image, CSS & JavaScript resource analysis
--   🧠 SEO checks (Title & Meta Description)
--   🚨 Performance warnings with severity levels
--   🎯 A--F performance grading system
--   💡 Actionable optimization recommendations
--   📥 Downloadable performance report (TXT)
--   📊 Clean & interactive UI using Streamlit
+### 📁 Data Handling
+- Upload datasets in **CSV, Excel, JSON, TSV, Parquet**
+- Automatic data profiling (rows, columns, missing values, duplicates)
+- Download cleaned & processed datasets
 
-------------------------------------------------------------------------
+### 🧹 Data Cleaning
+- Missing value handling (mean, median, mode, drop)
+- Duplicate removal
+- Outlier detection using **IQR**
+- Preview categorical encoding
 
-## 📸 Preview
+### 📊 Exploratory Data Analysis (EDA)
+- Histograms & distributions
+- Count plots for categorical features
+- Boxplots & outlier visualization
+- Correlation heatmaps
+- Pairplots (with sampling for large data)
 
-> Enter one or multiple website URLs and get instant performance
-> insights.
+### 🎯 AutoML Intelligence
+- Automatic **problem type detection** (Classification / Regression)
+- Target & feature selection
+- Feature scaling (StandardScaler, MinMaxScaler)
+- Categorical encoding (Label Encoding, One-Hot Encoding)
 
-------------------------------------------------------------------------
+### 🤖 Model Training
+**Classification Models**
+- Logistic Regression
+- Random Forest
+- Gradient Boosting
+- SVM
+- KNN
+- XGBoost (optional)
+
+**Regression Models**
+- Linear Regression
+- Random Forest Regressor
+- Gradient Boosting Regressor
+- SVR
+- XGBoost Regressor (optional)
+
+### ⚙️ Hyperparameter Tuning
+- Default parameters
+- Grid Search CV
+- Randomized Search CV
+
+### 📈 Model Evaluation
+- Accuracy, F1-score, ROC-AUC (Classification)
+- RMSE, MAE, R² Score (Regression)
+- Confusion Matrix / Residual plots
+- Feature importance visualization
+- Best model auto-selection
+
+### 📥 Downloads
+- Trained ML model (`.pkl`)
+- Cleaned dataset
+- Preprocessed dataset
+
+---
 
 ## 🛠️ Tech Stack
 
--   **Frontend / UI:** Streamlit
--   **Backend:** Python
--   **Libraries:**
-    -   requests
-    -   BeautifulSoup (bs4)
-    -   pandas
-    -   plotly
-    -   datetime
+- **Frontend:** Streamlit
+- **Data:** Pandas, NumPy
+- **Visualization:** Matplotlib, Seaborn
+- **Machine Learning:** Scikit-learn, XGBoost
+- **Deployment:** Streamlit Cloud
 
-------------------------------------------------------------------------
+---
 
-## 📦 Installation
+## 📦 Requirements
 
-### 1️⃣ Clone the Repository
+```txt
+streamlit>=1.28.0
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+seaborn>=0.12.0
+matplotlib>=3.7.0
+openpyxl>=3.1.0
+pyarrow>=14.0.0
+```
 
-``` bash
+---
+
+## ▶️ How to Run Locally
+
+```bash
+# Clone the repository
 git clone https://github.com/M-Muneebweb/AutoML-Data-Analysis-Platform.git
+
+# Navigate to project directory
 cd AutoML-Data-Analysis-Platform
-```
 
-### 2️⃣ Create Virtual Environment (Recommended)
-
-``` bash
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-```
-
-### 3️⃣ Install Requirements
-
-``` bash
+# Install dependencies
 pip install -r requirements.txt
-```
 
-### 4️⃣ Run the App
-
-``` bash
+# Run the app
 streamlit run app.py
 ```
 
-------------------------------------------------------------------------
+---
 
-## 📄 Requirements
+## 📌 Use Cases
 
-    streamlit>=1.28.0
-    pandas>=2.0.0
-    numpy>=1.24.0
-    scikit-learn>=1.3.0
-    xgboost>=2.0.0
-    seaborn>=0.12.0
-    matplotlib>=3.7.0
-    openpyxl>=3.1.0
-    pyarrow>=14.0.0
+- Beginners learning Machine Learning
+- Freelancers & Data Analysts
+- Rapid ML prototyping
+- Client demos & proof-of-concepts
 
-------------------------------------------------------------------------
-
-## 📊 Performance Metrics Explained
-
-  Metric      Description
-  ----------- -----------------------------
-  Load Time   Time to fetch the main page
-  Page Size   Total downloaded data
-  Requests    Number of HTTP requests
-  SEO         Title & Meta Description
-  Grade       A--F score (0--100)
-
-------------------------------------------------------------------------
-
-## ⚠️ Warnings System
-
--   🚨 **Critical** -- Immediate optimization required\
--   ⚠️ **Medium** -- Should be improved\
--   ✅ **Good** -- No action required
-
-------------------------------------------------------------------------
-
-## 📥 Downloadable Report
-
-The app allows you to **download a detailed TXT performance report**
-including: - Grade & score - Load time - Page size - Requests - SEO
-warnings
-
-------------------------------------------------------------------------
-
-## 🔮 Future Improvements
-
--   PDF & CSV report export
--   Core Web Vitals (LCP, CLS, INP)
--   Mobile performance testing
--   Lighthouse API integration
--   Dark mode UI
-
-------------------------------------------------------------------------
+---
 
 ## 👨‍💻 Author
 
-**Muneeb**\
-💼 Freelancer \| Python & Data Analysis\
-🌍 GitHub: https://github.com/M-Muneebweb
+**Muneeb**  
+Python | Data Analysis | Machine Learning  
+🌐 GitHub: https://github.com/M-Muneebweb
 
-------------------------------------------------------------------------
+---
 
 ## ⭐ Support
 
-If you like this project: - ⭐ Star the repository\
-- 🐛 Report issues\
-- 🤝 Contribute with PRs
+If you like this project:
+- ⭐ Star the repository  
+- 🍴 Fork it  
+- 🐛 Report issues  
+- 💡 Suggest new features  
 
-------------------------------------------------------------------------
+---
 
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
-------------------------------------------------------------------------
-
-🕒 Generated on: 2025-12-24 13:53:29
+> 🤖 *Upload your data, let AutoML do the heavy lifting, and get insights in minutes!*  
