@@ -1,96 +1,114 @@
-# 🚀 Website Performance Analyzer
+# 🤖 AutoML Data Analysis Platform
 
-An interactive **Streamlit-based web application** that analyzes website performance, SEO basics, and resource usage.  
-This tool helps developers, SEO specialists, and website owners quickly identify performance bottlenecks and optimization opportunities.
+An interactive **Streamlit-based AutoML & Data Analysis platform** that allows users to upload datasets, perform automatic data cleaning, exploratory data analysis (EDA), visualize data, and train multiple machine learning models — all in a single app.
 
 ---
 
 ## ✨ Features
 
-- 🌐 Analyze single or multiple URLs
-- ⏱️ Measure page load time
-- 📦 Calculate total page size (MB / KB)
-- 🔗 Count total HTTP requests
-- 🖼️ Detect heaviest images, CSS & JS files
-- 🔍 Basic SEO analysis (Title & Meta Description)
-- ⚠️ Smart performance warnings
-- 💡 Actionable optimization recommendations
-- 🏆 Performance Grade (A–F)
-- 📥 Downloadable performance report (TXT)
+- 📂 Upload datasets in multiple formats: CSV, Excel, JSON, TSV, Parquet
+- 🧹 Automatic **data cleaning**:
+  - Detect missing values
+  - Remove duplicates
+  - Handle categorical features
+- 📊 **Exploratory Data Analysis (EDA)** with interactive plots using Seaborn/Matplotlib:
+  - Histograms, boxplots, count plots
+  - Correlation heatmap, pairplots
+- 🎯 Target feature selection & problem type detection (classification/regression)
+- ⚙ Feature scaling (StandardScaler / MinMaxScaler) and encoding (OneHot / LabelEncoding)
+- 🤖 Train multiple ML models with user-defined or default hyperparameters:
+  - Classification: Logistic Regression, Random Forest, XGBoost, SVM, KNN
+  - Regression: Linear Regression, Random Forest Regressor, Gradient Boosting, XGBoost, SVR
+- 📈 Model evaluation and comparison:
+  - Classification: Accuracy, F1-Score, ROC-AUC, Confusion Matrix
+  - Regression: RMSE, MAE, R², Residual plots
+- 🏆 Highlight best-performing model
+- 📥 Download trained model (.pkl) and cleaned dataset
+- ⚡ Interactive UI with Streamlit components (sidebar, tabs, buttons, metrics, progress bars)
 
 ---
 
-## 🧠 Performance Metrics Checked
+## 🌐 Live App
 
-| Metric | Recommended |
-|------|------------|
-| Load Time | < 3 seconds |
-| Page Size | < 5 MB |
-| Requests | < 50 |
-| SEO | Title + Meta Description |
+Try the live app here:  
+👉 [AutoML Data Analysis Platform](https://automl-data-analysis-platform.streamlit.app/)
+
+## 📂 GitHub Repository
+
+Check the code:  
+👉 [GitHub - AutoML Data Analysis Platform](https://github.com/M-Muneebweb/AutoML-Data-Analysis-Platform)
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python
-- Streamlit
-- Requests
-- BeautifulSoup (bs4)
-- Pandas
-- Plotly
+- **Python**  
+- **Streamlit**  
+- **Pandas**  
+- **NumPy**  
+- **Scikit-Learn**  
+- **XGBoost**  
+- **Seaborn**  
+- **Matplotlib**
 
 ---
 
 ## 📦 Installation
 
-### Clone the repository
+### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/your-username/website-performance-analyzer.git
-cd website-performance-analyzer
+git clone https://github.com/M-Muneebweb/AutoML-Data-Analysis-Platform.git
+cd AutoML-Data-Analysis-Platform```
+2️⃣ Install dependencies
+```pip install -r requirements.txt
 ```
-
-### Install dependencies
-```bash
-pip install streamlit requests beautifulsoup4 pandas plotly
+Requirements:
 ```
-
-### Run the app
-```bash
-streamlit run app.py
+streamlit>=1.28.0
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+seaborn>=0.12.0
+matplotlib>=3.7.0
+openpyxl>=3.1.0
+pyarrow>=14.0.0
 ```
+3️⃣ Run the app
+```streamlit run app.py
+```
+🧪 How to Use
 
----
+Upload your dataset (CSV, Excel, JSON, TSV, Parquet)
 
-## 🧪 How to Use
+Explore dataset summary and column types
 
-1. Enter website URL(s)
-2. Click Analyze
-3. Review metrics, warnings & recommendations
-4. Download performance report if needed
+Perform data cleaning (missing values, duplicates, encoding)
 
----
+Generate interactive plots for EDA
 
-## 📊 Performance Grading System
+Select target feature and problem type (classification/regression)
 
-| Score | Grade |
-|------|------|
-| 90–100 | A |
-| 80–89 | B |
-| 70–79 | C |
-| 60–69 | D |
-| < 60 | F |
+Choose features, models, and hyperparameters
 
----
+Train models and evaluate performance metrics
 
-## 👨‍💻 Author
+View plots and comparison charts
 
-**Muhammad Muneeb**  
-AI & Web Tools Developer  
+Download best model and cleaned dataset
+
+📊 Performance & Evaluation Metrics
+
+Classification: Accuracy, F1-Score, ROC-AUC, Confusion Matrix
+
+Regression: RMSE, MAE, R², Residual plots
+
+👨‍💻 Author
+
+Muhammad Muneeb
+AI & Data Science Developer
 Pakistan
 
----
+📜 License
 
-## 📜 License
-
-MIT License
+This project is licensed under the MIT License.
