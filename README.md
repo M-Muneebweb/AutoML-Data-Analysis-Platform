@@ -75,7 +75,7 @@ openpyxl>=3.1.0
 pyarrow>=14.0.0
 ```
 3️⃣ Run the app
-```streamlit run app.py
+```streamlit run app.py```
 ```
 🧪 How to Use
 
@@ -112,3 +112,4 @@ Pakistan
 📜 License
 
 This project is licensed under the MIT License.
+```
